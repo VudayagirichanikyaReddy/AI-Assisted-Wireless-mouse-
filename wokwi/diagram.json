@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Air Mouse Glove",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "id": "esp",
+      "type": "board-esp32-devkit-c-v4",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "id": "imu",
+      "type": "wokwi-mpu6050",
+      "top": 15,
+      "left": 260,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    ["esp:3V3", "imu:VCC", "red", []],
+    ["esp:GND.1", "imu:GND", "black", []],
+    ["esp:21", "imu:SDA", "green", []],
+    ["esp:22", "imu:SCL", "blue", []]
+  ],
+  "dependencies": {}
+}
